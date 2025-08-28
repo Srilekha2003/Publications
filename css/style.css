@@ -238,8 +238,74 @@
     background: rgba(250, 250, 250, .6);
 }
 /*** Navbar End ***/
+/* journal  */
+.testimonial-carousel .card {
+    height: 100%; 
+    min-height: 280px;   /* Adjust as per design */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-carousel .card img {
+    height: 180px;       /* fixed image height */
+    object-fit: cover;   /* crop nicely */
+    width: 100%;
+}
+
+.testimonial-carousel .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+/* Center dots below carousel */
+.testimonial-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px;   /* space between cards and dots */
+}
+
+.testimonial-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.testimonial-carousel .owl-dot span {
+    width: 10px;
+    height: 10px;
+    background: #ccc;      /* inactive dot color */
+    display: block;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* active dot highlight */
+.testimonial-carousel .owl-dot.active span {
+    background: var(--bs-primary);   /* your brand green */
+    transform: scale(1.2);
+}
+
 
 /*** Carousel Header Start ***/
+.header-carousel-item-img-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;   /* exactly one viewport height */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.header-carousel-item-img-1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* no distortion */
+}
+
 .header-carousel .header-carousel-item {
     position: relative;
     overflow: hidden;
@@ -558,9 +624,67 @@
 .service .service-item:hover .service-content .service-content-inner a.h4:hover {
     color: var(--bs-primary) !important;
 }
+/* Make all columns stretch equally */
+.service .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Ensure each card fills equal height */
+.service .service-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Let content stretch so button stays at bottom */
+.service .service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /*** Service End ***/
 
 /*** Project Start ***/
+/*** Gallery Section (Project Grid) ***/
+.project .project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project .project-item .project-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project .project-item .project-img::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: rgba(68, 210, 246, 0.4); /* Your primary color with opacity */
+    transition: 0.5s;
+}
+
+.project .project-item:hover .project-img::after {
+    height: 100%;
+}
+
+.project .project-item img {
+    transition: 0.5s;
+}
+
+.project .project-item:hover img {
+    transform: scale(1.2);
+}
+
 .project .project-carousel.owl-carousel {
     height: 100%;
 }
@@ -642,34 +766,32 @@
     height: 100%;
 }
 
-.project-carousel .owl-dots {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -120px;
-    transition: 0.5s;
-}
 
-.project-carousel .owl-dots .owl-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    margin-right: 15px;
-    background: var(--bs-dark);
-    transition: 0.5s;
-}
 
-.project-carousel .owl-dots .owl-dot.active {
-    width: 30px;
-    height: 30px;
-    border-radius: 40px;
-    border: 8px solid var(--bs-primary);
-}
 /*** Project End ***/
+/* Editorial board start*/
+.editorial-card {
+        border: 0;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
+    .editorial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .team-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .editorial-card:hover .team-img {
+        transform: scale(1.08);
+    }
+ /* Editorial board end  */
 /*** Blog Start ***/
 .blog .blog-item .project-img {
     position: relative;
@@ -689,7 +811,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(68, 210, 246, 0.2);
+    background: rgba(68, 210, 246, 0.4);
     transition: 0.5s;
     opacity: 0;
 }
@@ -707,6 +829,32 @@
 }
 
 /*** Blog End ***/
+/* conference proceedings  */
+.hover-card {
+        position: relative;
+        cursor: pointer;
+    }
+    .hover-card img {
+        transition: transform 0.5s ease;
+    }
+    .hover-card:hover img {
+        transform: scale(1.05) ;
+    }
+    .hover-card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(68, 210, 246, 0.4); /* primary overlay color */
+       
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        border-radius: 0.5rem;
+    }
+    .hover-card:hover .overlay {
+        opacity: 1;
+    }
 
 /*** Team Start ***/
 .team .team-item {
