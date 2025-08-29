@@ -773,12 +773,12 @@
 .editorial-card {
         border: 0;
         transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 8px #44D2F6;
     }
 
     .editorial-card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 20px #44D2F6;
     }
 
     .team-img {
