@@ -67,13 +67,16 @@
         <!-- Topbar End -->
 
 
-        <!-- Navbar & Hero Start -->
+       <!-- Navbar & Hero Start -->
         <div class="container-fluid sticky-top px-0">
             <div class="container px-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                    <a href="index.html" class="navbar-brand p-0">
-                        <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Rainbow Publications</h1>
-                    </a>
+                  <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+    <img src="img/logo1.png" alt="Rainbow Publications Logo" style="height: 60px; width: auto; object-fit: contain; margin-right: 10px;">
+    <span class="text-primary h2 m-0">Rainbow Publications</span>
+</a>
+
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars"></span>
                     </button>
@@ -105,14 +108,14 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Journals</a>
                                 <div class="dropdown-menu m-0">
-                                    <a href="#" class="dropdown-item">IJPDD</a>
-                                    <a href="#" class="dropdown-item">JCARR</a>
-                                    <a href="#" class="dropdown-item">CPLR</a>
-                                    <a href="#" class="dropdown-item">IJHSE</a>
-                                    <a href="#" class="dropdown-item">IJHSBM</a>
-                                    <a href="#" class="dropdown-item">IJNPAM</a>
-                                    <a href="#" class="dropdown-item">IJIDMS</a>
-                                    <a href="#" class="dropdown-item">IJMSI</a>
+                                    <a href="https://ijpdd.org/index.php/files" class="dropdown-item">IJPDD</a>
+                                    <a href="https://jcarr.in/index.php/files" class="dropdown-item">JCARR</a>
+                                    <a href="https://cplr.in/index.php/files" class="dropdown-item">CPLR</a>
+                                    <a href="https://ijhse.com/index.php/files" class="dropdown-item">IJHSE</a>
+                                    <a href="https://ijhsbm.com/index.php/files" class="dropdown-item">IJHSBM</a>
+                                    <a href="https://ijnpam.com/index.php/files" class="dropdown-item">IJNPAM</a>
+                                    <a href="https://ijidms.com/index.php/files" class="dropdown-item">IJIDMS</a>
+                                    <a href="https://ijmsi.in/index.php/files/index" class="dropdown-item">IJMSI</a>
                                 </div>
                             </div>
 
@@ -132,15 +135,15 @@
                                 <div class="dropdown-menu m-0">
                                     <div class="dropdown-submenu">
                                         <a href="#" class="dropdown-item dropdown-toggle">Conference Proceedings</a>
-                                        <!-- <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item">National Seminar</a>
-                                        </div> -->
+                                        <div class="dropdown-menu">
+                                            <a href="conference-proceedings.html" class="dropdown-item">National Seminar</a>
+                                        </div>
                                     </div>
                                     <a href="journal-selection-and-publication-service.html" class="dropdown-item">Journal Selection & Publication</a>
                                     <a href="book-publication-and-writing-service.html" class="dropdown-item">Book Publication & Writing</a>
                                     <a href="ipr-service.html" class="dropdown-item">IPR Service</a>
                                     <a href="writing-service.html" class="dropdown-item">Writing Service</a>
-                                    <a href="#" class="dropdown-item">Plagiarism Service</a>
+                                    <a href="plagiarism.html" class="dropdown-item">Plagiarism Service</a>
                                 </div>
                             </div>
 
@@ -407,6 +410,38 @@
             </div>
         </div>
         <!-- Copyright End -->
+         <!-- WhatsApp Chat Widget Start -->
+        <div class="whatsapp-widget">
+            <!-- Floating Button -->
+            <div class="whatsapp-button" onclick="toggleWhatsApp()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </div>
+
+            <!-- Chat Box -->
+            <div class="whatsapp-box" id="whatsappBox">
+                <div class="whatsapp-header">
+                    <h5>S2S Web Solutions</h5>
+                    <small>Typically replies within a minute</small>
+                </div>
+                <div class="whatsapp-body">
+                    <p>👋 Hi there!<br>How can we help you today?</p>
+                </div>
+                <div class="whatsapp-footer">
+                    <a href="https://wa.me/919703180922?text=Hi%20S2S%20Web%20Solutions%2C%20I%20need%20your%20help!"
+                        target="_blank">
+                        Start Chat
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleWhatsApp() {
+                var box = document.getElementById("whatsappBox");
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        </script>
+        <!-- WhatsApp Chat Widget End -->
 
 
         <!-- Back to Top -->

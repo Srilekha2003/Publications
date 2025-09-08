@@ -127,6 +127,8 @@
 /*** Topbar End ***/
 
 /*** Navbar ***/
+
+
 .sticky-top,
 .sticky-top .container {
     transition: 0.5s !important;
@@ -237,6 +239,8 @@
 #searchModal .modal-content {
     background: rgba(250, 250, 250, .6);
 }
+
+
 /*** Navbar End ***/
 /* journal  */
 .testimonial-carousel .card {
@@ -1102,3 +1106,93 @@
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+/* <!-- WhatsApp Chat Widget Start --> */
+
+  .whatsapp-widget {
+    position: fixed;
+    bottom: 100px; /* moved up a bit */
+    right: 35px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Floating Button */
+  .whatsapp-button {
+    background-color: #25d366;
+    width: 50px;   /* bigger */
+    height: 50px;  /* bigger */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    background-color: #20b358;
+  }
+  .whatsapp-button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Chat Box */
+  .whatsapp-box {
+    display: none;
+    position: absolute;
+    bottom: 90px; /* adjusted for bigger button */
+    right: 0;
+    width: 320px; /* slightly bigger */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    overflow: hidden;
+  }
+
+  .whatsapp-header {
+    background: #0a5f54;
+    color: white;
+    padding: 18px;
+  }
+  .whatsapp-header h5 {
+    margin: 0;
+    font-size: 18px; /* bigger */
+    color: white;
+  }
+  .whatsapp-header small {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+
+  .whatsapp-body {
+    padding: 18px;
+    font-size: 15px;
+    color: #333;
+    background: #f9f9f9;
+  }
+
+  .whatsapp-body p {
+    margin: 0 0 12px;
+  }
+
+  .whatsapp-footer {
+    text-align: center;
+    padding: 12px;
+  }
+
+  .whatsapp-footer a {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .whatsapp-footer a:hover {
+    background: #20b358;
+  }
